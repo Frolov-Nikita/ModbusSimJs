@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ModbusSimJs.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JsFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cfg\example.js</Value>
+    </Setting>
+    <Setting Name="VarTxt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cfg\vars.txt</Value>
+    </Setting>
+    <Setting Name="LoopPeriodMs" Type="System.Int64" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{362858E3-B642-4A6D-8819-8B326F02BE4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ModbusSimJs</RootNamespace>
+    <AssemblyName>ModbusSimJs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedStringBuilder, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e818a2fc08933ddb, processorArchitecture=MSIL">
+      <HintPath>packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="ClearScript, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ClearScript.6.0.2\lib\net45\ClearScript.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>packages\JavaScriptEngineSwitcher.Core.3.3.0\lib\net45\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.V8, Version=3.5.5.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>packages\JavaScriptEngineSwitcher.V8.3.5.5\lib\net45\JavaScriptEngineSwitcher.V8.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus, Version=3.0.62.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NModbus.3.0.62\lib\net46\NModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\SerialParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SerialParams.Designer.cs">
+      <DependentUpon>SerialParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TagsView.Designer.cs">
+      <DependentUpon>TagsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TcpParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TcpParams.Designer.cs">
+      <DependentUpon>TcpParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagValueFloatEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TagValueFloatEditor.Designer.cs">
+      <DependentUpon>TagValueFloatEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Js\JsFile.cs" />
+    <Compile Include="Js\JsSys.cs" />
+    <Compile Include="ObservableDynamicDictionary.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Js\JsConsole.cs" />
+    <Compile Include="ModbusRegion.cs" />
+    <Compile Include="ModbusValueType.cs" />
+    <Compile Include="PointSource.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlaveStorage.cs" />
+    <Compile Include="Tag.cs" />
+    <Compile Include="TagInfo.cs" />
+    <Compile Include="TagsList.cs" />
+    <Compile Include="TypeConverterAbstract.cs" />
+    <Compile Include="TypeConverterBool.cs" />
+    <Compile Include="TypeConverterFloat.cs" />
+    <Compile Include="TypeConverterInt16.cs" />
+    <Compile Include="TypeConverterInt32.cs" />
+    <EmbeddedResource Include="Controls\SerialParams.resx">
+      <DependentUpon>SerialParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TagsView.resx">
+      <DependentUpon>TagsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TcpParams.resx">
+      <DependentUpon>TcpParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TagValueFloatEditor.resx">
+      <DependentUpon>TagValueFloatEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconStart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageCompile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network.png" />
+    <None Include="Cfg\vars.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>ModbusSimJs</CustomToolNamespace>
+    </None>
+    <None Include="Cfg\example.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>ModbusSimJs</CustomToolNamespace>
+    </None>
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\NewFile.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets" Condition="Exists('packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets'))" />
+  </Target>
+</Project>
