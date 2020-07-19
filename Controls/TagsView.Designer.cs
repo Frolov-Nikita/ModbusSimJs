@@ -33,6 +33,7 @@
             this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderRegion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDesc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewTags
@@ -41,7 +42,8 @@
             this.columnHeaderName,
             this.columnHeaderType,
             this.columnHeaderRegion,
-            this.columnHeaderValue});
+            this.columnHeaderValue,
+            this.columnHeaderDesc});
             this.listViewTags.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewTags.FullRowSelect = true;
             this.listViewTags.GridLines = true;
@@ -53,6 +55,7 @@
             this.listViewTags.TabIndex = 0;
             this.listViewTags.UseCompatibleStateImageBehavior = false;
             this.listViewTags.View = System.Windows.Forms.View.Details;
+            this.listViewTags.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTags_MouseDoubleClick);
             // 
             // columnHeaderName
             // 
@@ -69,6 +72,11 @@
             // columnHeaderValue
             // 
             this.columnHeaderValue.Text = "Value";
+            // 
+            // columnHeaderDesc
+            // 
+            this.columnHeaderDesc.Text = "Description";
+            this.columnHeaderDesc.Width = 81;
             // 
             // TagsView
             // 
@@ -88,5 +96,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderType;
         private System.Windows.Forms.ColumnHeader columnHeaderRegion;
         private System.Windows.Forms.ColumnHeader columnHeaderValue;
+        private System.Windows.Forms.ColumnHeader columnHeaderDesc;
     }
 }

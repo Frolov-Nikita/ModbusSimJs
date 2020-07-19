@@ -31,42 +31,43 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.TabPanelVars = new System.Windows.Forms.TabControl();
+            this.tabPageVarSrc = new System.Windows.Forms.TabPage();
             this.richTextBoxVar = new System.Windows.Forms.RichTextBox();
+            this.tabPageVars = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.listViewConsole = new System.Windows.Forms.ListView();
-            this.columnHeaderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderMsg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItemNew = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItemSave = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemSaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonStartStop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonJsFileSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRemoveJs = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRunLoop = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonTcpConfog = new System.Windows.Forms.ToolStripButton();
-            this.TabPanelVars = new System.Windows.Forms.TabControl();
-            this.tabPageVarSrc = new System.Windows.Forms.TabPage();
-            this.tabPageVars = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.listViewConsole = new System.Windows.Forms.ListView();
+            this.columnHeaderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMsg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tagsView1 = new ModbusSimJs.Controls.TagsView();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
+            this.TabPanelVars.SuspendLayout();
+            this.tabPageVarSrc.SuspendLayout();
+            this.tabPageVars.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.TabPanelVars.SuspendLayout();
-            this.tabPageVarSrc.SuspendLayout();
-            this.tabPageVars.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -95,6 +96,30 @@
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
+            // TabPanelVars
+            // 
+            this.TabPanelVars.Controls.Add(this.tabPageVarSrc);
+            this.TabPanelVars.Controls.Add(this.tabPageVars);
+            this.TabPanelVars.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabPanelVars.Location = new System.Drawing.Point(0, 0);
+            this.TabPanelVars.Multiline = true;
+            this.TabPanelVars.Name = "TabPanelVars";
+            this.TabPanelVars.SelectedIndex = 0;
+            this.TabPanelVars.Size = new System.Drawing.Size(561, 261);
+            this.TabPanelVars.TabIndex = 4;
+            this.TabPanelVars.SelectedIndexChanged += new System.EventHandler(this.TabPanelVars_SelectedIndexChanged);
+            // 
+            // tabPageVarSrc
+            // 
+            this.tabPageVarSrc.Controls.Add(this.richTextBoxVar);
+            this.tabPageVarSrc.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVarSrc.Name = "tabPageVarSrc";
+            this.tabPageVarSrc.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageVarSrc.Size = new System.Drawing.Size(553, 235);
+            this.tabPageVarSrc.TabIndex = 0;
+            this.tabPageVarSrc.Text = "VarsSource";
+            this.tabPageVarSrc.UseVisualStyleBackColor = true;
+            // 
             // richTextBoxVar
             // 
             this.richTextBoxVar.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -106,6 +131,17 @@
             this.richTextBoxVar.Text = resources.GetString("richTextBoxVar.Text");
             this.richTextBoxVar.WordWrap = false;
             // 
+            // tabPageVars
+            // 
+            this.tabPageVars.Controls.Add(this.tagsView1);
+            this.tabPageVars.Location = new System.Drawing.Point(4, 22);
+            this.tabPageVars.Name = "tabPageVars";
+            this.tabPageVars.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageVars.Size = new System.Drawing.Size(553, 235);
+            this.tabPageVars.TabIndex = 1;
+            this.tabPageVars.Text = "VarsTable";
+            this.tabPageVars.UseVisualStyleBackColor = true;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -113,6 +149,7 @@
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton1,
             this.toolStripSeparator3,
+            this.toolStripButton1,
             this.toolStripButtonStartStop,
             this.toolStripSeparator1,
             this.toolStripButtonJsFileSelect,
@@ -122,23 +159,133 @@
             this.toolStripButtonTcpConfog});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(339, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(362, 25);
             this.toolStrip1.TabIndex = 0;
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemNew,
+            this.toolStripMenuItemOpen});
+            this.toolStripDropDownButton2.Image = global::ModbusSimJs.Properties.Resources.NewFile;
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
+            // 
+            // toolStripMenuItemNew
+            // 
+            this.toolStripMenuItemNew.Name = "toolStripMenuItemNew";
+            this.toolStripMenuItemNew.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemNew.Text = "New";
+            // 
+            // toolStripMenuItemOpen
+            // 
+            this.toolStripMenuItemOpen.Name = "toolStripMenuItemOpen";
+            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemOpen.Text = "Open";
+            this.toolStripMenuItemOpen.Click += new System.EventHandler(this.toolStripMenuItemOpen_Click);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSave,
+            this.toolStripMenuItemSaveAs});
+            this.toolStripDropDownButton1.Image = global::ModbusSimJs.Properties.Resources.Save;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // toolStripMenuItemSave
+            // 
+            this.toolStripMenuItemSave.Name = "toolStripMenuItemSave";
+            this.toolStripMenuItemSave.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemSave.Text = "Save";
+            this.toolStripMenuItemSave.Click += new System.EventHandler(this.toolStripMenuItemSave_Click);
+            // 
+            // toolStripMenuItemSaveAs
+            // 
+            this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
+            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemSaveAs.Text = "SaveAs";
+            this.toolStripMenuItemSaveAs.Click += new System.EventHandler(this.toolStripMenuItemSaveAs_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::ModbusSimJs.Properties.Resources.ImageCompile;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Compile";
+            this.toolStripButton1.ToolTipText = "toolStripButtonCompile";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButtonStartStop
+            // 
+            this.toolStripButtonStartStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonStartStop.ForeColor = System.Drawing.Color.DarkGreen;
+            this.toolStripButtonStartStop.Image = global::ModbusSimJs.Properties.Resources.ImageStart;
+            this.toolStripButtonStartStop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonStartStop.Name = "toolStripButtonStartStop";
+            this.toolStripButtonStartStop.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonStartStop.Text = "Start";
+            this.toolStripButtonStartStop.Click += new System.EventHandler(this.toolStripButtonStartStop_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButtonJsFileSelect
+            // 
+            this.toolStripButtonJsFileSelect.Image = global::ModbusSimJs.Properties.Resources.JsFile;
+            this.toolStripButtonJsFileSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonJsFileSelect.Name = "toolStripButtonJsFileSelect";
+            this.toolStripButtonJsFileSelect.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButtonJsFileSelect.Text = "JsFile";
+            this.toolStripButtonJsFileSelect.Click += new System.EventHandler(this.toolStripButtonJsFileSelect_Click);
+            // 
+            // toolStripButtonRemoveJs
+            // 
+            this.toolStripButtonRemoveJs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonRemoveJs.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRemoveJs.Image")));
+            this.toolStripButtonRemoveJs.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRemoveJs.Name = "toolStripButtonRemoveJs";
+            this.toolStripButtonRemoveJs.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonRemoveJs.Text = "X";
+            this.toolStripButtonRemoveJs.Click += new System.EventHandler(this.toolStripButtonRemoveJs_Click);
+            // 
+            // toolStripButtonRunLoop
+            // 
+            this.toolStripButtonRunLoop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonRunLoop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRunLoop.Image")));
+            this.toolStripButtonRunLoop.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRunLoop.Name = "toolStripButtonRunLoop";
+            this.toolStripButtonRunLoop.Size = new System.Drawing.Size(46, 22);
+            this.toolStripButtonRunLoop.Text = "Loop()";
+            this.toolStripButtonRunLoop.Click += new System.EventHandler(this.toolStripButtonRunLoop_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonTcpConfog
+            // 
+            this.toolStripButtonTcpConfog.Image = global::ModbusSimJs.Properties.Resources.Network;
+            this.toolStripButtonTcpConfog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonTcpConfog.Name = "toolStripButtonTcpConfog";
+            this.toolStripButtonTcpConfog.Size = new System.Drawing.Size(105, 22);
+            this.toolStripButtonTcpConfog.Text = "127.0.0.1:11502";
             // 
             // splitContainer2
             // 
@@ -188,136 +335,6 @@
             this.columnHeaderMsg.Text = "Message";
             this.columnHeaderMsg.Width = 400;
             // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemNew,
-            this.toolStripMenuItemOpen});
-            this.toolStripDropDownButton2.Image = global::ModbusSimJs.Properties.Resources.NewFile;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
-            // 
-            // toolStripMenuItemNew
-            // 
-            this.toolStripMenuItemNew.Name = "toolStripMenuItemNew";
-            this.toolStripMenuItemNew.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemNew.Text = "New";
-            // 
-            // toolStripMenuItemOpen
-            // 
-            this.toolStripMenuItemOpen.Name = "toolStripMenuItemOpen";
-            this.toolStripMenuItemOpen.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemOpen.Text = "Open";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemSave,
-            this.toolStripMenuItemSaveAs});
-            this.toolStripDropDownButton1.Image = global::ModbusSimJs.Properties.Resources.Save;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // toolStripMenuItemSave
-            // 
-            this.toolStripMenuItemSave.Name = "toolStripMenuItemSave";
-            this.toolStripMenuItemSave.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemSave.Text = "Save";
-            // 
-            // toolStripMenuItemSaveAs
-            // 
-            this.toolStripMenuItemSaveAs.Name = "toolStripMenuItemSaveAs";
-            this.toolStripMenuItemSaveAs.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItemSaveAs.Text = "SaveAs";
-            // 
-            // toolStripButtonStartStop
-            // 
-            this.toolStripButtonStartStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonStartStop.ForeColor = System.Drawing.Color.DarkGreen;
-            this.toolStripButtonStartStop.Image = global::ModbusSimJs.Properties.Resources.ImageStart;
-            this.toolStripButtonStartStop.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonStartStop.Name = "toolStripButtonStartStop";
-            this.toolStripButtonStartStop.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonStartStop.Text = "Start";
-            this.toolStripButtonStartStop.Click += new System.EventHandler(this.toolStripButtonStartStop_Click);
-            // 
-            // toolStripButtonJsFileSelect
-            // 
-            this.toolStripButtonJsFileSelect.Image = global::ModbusSimJs.Properties.Resources.ImageCompile;
-            this.toolStripButtonJsFileSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonJsFileSelect.Name = "toolStripButtonJsFileSelect";
-            this.toolStripButtonJsFileSelect.Size = new System.Drawing.Size(54, 22);
-            this.toolStripButtonJsFileSelect.Text = "JsFile";
-            this.toolStripButtonJsFileSelect.Click += new System.EventHandler(this.toolStripButtonJsFileSelect_Click);
-            // 
-            // toolStripButtonRemoveJs
-            // 
-            this.toolStripButtonRemoveJs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonRemoveJs.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRemoveJs.Image")));
-            this.toolStripButtonRemoveJs.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonRemoveJs.Name = "toolStripButtonRemoveJs";
-            this.toolStripButtonRemoveJs.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonRemoveJs.Text = "X";
-            this.toolStripButtonRemoveJs.Click += new System.EventHandler(this.toolStripButtonRemoveJs_Click);
-            // 
-            // toolStripButtonRunLoop
-            // 
-            this.toolStripButtonRunLoop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonRunLoop.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRunLoop.Image")));
-            this.toolStripButtonRunLoop.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonRunLoop.Name = "toolStripButtonRunLoop";
-            this.toolStripButtonRunLoop.Size = new System.Drawing.Size(46, 22);
-            this.toolStripButtonRunLoop.Text = "Loop()";
-            this.toolStripButtonRunLoop.Click += new System.EventHandler(this.toolStripButtonRunLoop_Click);
-            // 
-            // toolStripButtonTcpConfog
-            // 
-            this.toolStripButtonTcpConfog.Image = global::ModbusSimJs.Properties.Resources.Network;
-            this.toolStripButtonTcpConfog.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonTcpConfog.Name = "toolStripButtonTcpConfog";
-            this.toolStripButtonTcpConfog.Size = new System.Drawing.Size(105, 22);
-            this.toolStripButtonTcpConfog.Text = "127.0.0.1:11502";
-            // 
-            // TabPanelVars
-            // 
-            this.TabPanelVars.Controls.Add(this.tabPageVarSrc);
-            this.TabPanelVars.Controls.Add(this.tabPageVars);
-            this.TabPanelVars.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabPanelVars.Location = new System.Drawing.Point(0, 0);
-            this.TabPanelVars.Multiline = true;
-            this.TabPanelVars.Name = "TabPanelVars";
-            this.TabPanelVars.SelectedIndex = 0;
-            this.TabPanelVars.Size = new System.Drawing.Size(561, 261);
-            this.TabPanelVars.TabIndex = 4;
-            // 
-            // tabPageVarSrc
-            // 
-            this.tabPageVarSrc.Controls.Add(this.richTextBoxVar);
-            this.tabPageVarSrc.Location = new System.Drawing.Point(4, 22);
-            this.tabPageVarSrc.Name = "tabPageVarSrc";
-            this.tabPageVarSrc.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVarSrc.Size = new System.Drawing.Size(553, 235);
-            this.tabPageVarSrc.TabIndex = 0;
-            this.tabPageVarSrc.Text = "VarsSource";
-            this.tabPageVarSrc.UseVisualStyleBackColor = true;
-            // 
-            // tabPageVars
-            // 
-            this.tabPageVars.Controls.Add(this.tagsView1);
-            this.tabPageVars.Location = new System.Drawing.Point(4, 22);
-            this.tabPageVars.Name = "tabPageVars";
-            this.tabPageVars.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageVars.Size = new System.Drawing.Size(553, 235);
-            this.tabPageVars.TabIndex = 1;
-            this.tabPageVars.Text = "VarsTable";
-            this.tabPageVars.UseVisualStyleBackColor = true;
-            // 
             // tagsView1
             // 
             this.tagsView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -341,15 +358,15 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            this.TabPanelVars.ResumeLayout(false);
+            this.tabPageVarSrc.ResumeLayout(false);
+            this.tabPageVars.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.TabPanelVars.ResumeLayout(false);
-            this.tabPageVarSrc.ResumeLayout(false);
-            this.tabPageVars.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,6 +400,7 @@
         private System.Windows.Forms.TabPage tabPageVarSrc;
         private System.Windows.Forms.TabPage tabPageVars;
         private Controls.TagsView tagsView1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

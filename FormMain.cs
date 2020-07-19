@@ -340,6 +340,67 @@ namespace ModbusSimJs
         {
             LoadJsFile(null);
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CompileTags(richTextBoxVar.Text);
+                ColorizeTags();
+                tagsView1.Load(tags);
+            }
+            catch (Exception ex)
+            {
+                JsConsole_ConsoleMessage(consoleMessageType.error, "error. \r\n" + ex.Message);
+            }
+        }
+
+
+        void SaveVars(string fileName)
+        {
+            File.WriteAllText(fileName, richTextBoxVar.Text);
+        }
+
+        void SaveAsVars()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "*txt|*.txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(sfd.FileName, richTextBoxVar.Text);
+                Properties.Settings.Default.VarTxt = sfd.FileName;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void toolStripMenuItemSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveAsVars();
+        }
+
+        private void toolStripMenuItemSave_Click(object sender, EventArgs e)
+        {
+            var fileName = Properties.Settings.Default.VarTxt;
+            SaveVars(fileName);
+        }
+
+        private void toolStripMenuItemOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "*.txt|*.txt";
+            if(ofd.ShowDialog() == DialogResult.OK)
+                LoadVarFile(ofd.FileName);
+        }
+
+        private void TabPanelVars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(((TabControl)sender).SelectedTab == tabPageVars)
+            {
+                CompileTags(richTextBoxVar.Text);
+                tagsView1.Load(tags);
+            }
+
+        }
     }
 }
 

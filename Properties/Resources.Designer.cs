@@ -93,6 +93,16 @@ namespace ModbusSimJs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JsFile {
+            get {
+                object obj = ResourceManager.GetObject("JsFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Network {
             get {
                 object obj = ResourceManager.GetObject("Network", resourceCulture);

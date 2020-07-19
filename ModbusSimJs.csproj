@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,11 +96,29 @@
     <Compile Include="Controls\TcpParams.Designer.cs">
       <DependentUpon>TcpParams.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TagValueFloatEditor.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\TagBoolValueEditor.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\TagValueFloatEditor.Designer.cs">
-      <DependentUpon>TagValueFloatEditor.cs</DependentUpon>
+    <Compile Include="Forms\TagBoolValueEditor.Designer.cs">
+      <DependentUpon>TagBoolValueEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TagInt32ValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TagInt32ValueEditor.Designer.cs">
+      <DependentUpon>TagInt32ValueEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TagInt16ValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TagInt16ValueEditor.Designer.cs">
+      <DependentUpon>TagInt16ValueEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TagFloatValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TagFloatValueEditor.Designer.cs">
+      <DependentUpon>TagFloatValueEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Js\JsFile.cs" />
     <Compile Include="Js\JsSys.cs" />
@@ -120,11 +153,17 @@
     <EmbeddedResource Include="Controls\TcpParams.resx">
       <DependentUpon>TcpParams.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TagValueFloatEditor.resx">
-      <DependentUpon>TagValueFloatEditor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TagBoolValueEditor.resx">
+      <DependentUpon>TagBoolValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TagInt32ValueEditor.resx">
+      <DependentUpon>TagInt32ValueEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TagInt16ValueEditor.resx">
+      <DependentUpon>TagInt16ValueEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +211,21 @@
     </None>
     <None Include="Resources\Save.png" />
     <None Include="Resources\NewFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jsFile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets" Condition="Exists('packages\Microsoft.ClearScript.6.0.2\build\net45\Microsoft.ClearScript.targets')" />

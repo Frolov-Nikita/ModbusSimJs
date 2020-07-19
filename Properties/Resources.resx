@@ -127,6 +127,9 @@
   <data name="ImageStop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageStop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="JsFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jsFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Network" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

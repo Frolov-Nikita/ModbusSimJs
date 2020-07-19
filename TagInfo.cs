@@ -230,8 +230,12 @@ namespace ModbusSimJs
                 else
                     return false;
 
-            if (Enum.TryParse(a, true, out ModbusValueType tagType))
+            if (Enum.TryParse(a, true, out ModbusValueType parsedType))
+            {
+                type = parsedType;
                 return true;
+            }
+                
 
             // экзотика
             switch (a)
@@ -240,6 +244,7 @@ namespace ModbusSimJs
                     type = ModbusValueType.Bool;
                     break;
 
+                case "float":
                 case "real":
                     type = ModbusValueType.Float;
                     break;
