@@ -40,6 +40,7 @@
             this.buttonTrue.TabIndex = 0;
             this.buttonTrue.Text = "True";
             this.buttonTrue.UseVisualStyleBackColor = true;
+            this.buttonTrue.Click += new System.EventHandler(this.buttonTrue_Click);
             // 
             // buttonFalse
             // 
@@ -49,6 +50,7 @@
             this.buttonFalse.TabIndex = 1;
             this.buttonFalse.Text = "False";
             this.buttonFalse.UseVisualStyleBackColor = true;
+            this.buttonFalse.Click += new System.EventHandler(this.buttonFalse_Click);
             // 
             // TagBoolValueEditor
             // 

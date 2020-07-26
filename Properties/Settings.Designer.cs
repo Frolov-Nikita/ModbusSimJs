@@ -58,5 +58,77 @@ namespace ModbusSimJs.Properties {
                 this["LoopPeriodMs"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PortName {
+            get {
+                return ((string)(this["PortName"]));
+            }
+            set {
+                this["PortName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None")]
+        public global::RJCP.IO.Ports.Parity Parity {
+            get {
+                return ((global::RJCP.IO.Ports.Parity)(this["Parity"]));
+            }
+            set {
+                this["Parity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("One")]
+        public global::RJCP.IO.Ports.StopBits StopBits {
+            get {
+                return ((global::RJCP.IO.Ports.StopBits)(this["StopBits"]));
+            }
+            set {
+                this["StopBits"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public int DataBits {
+            get {
+                return ((int)(this["DataBits"]));
+            }
+            set {
+                this["DataBits"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("19200")]
+        public int BaudRate {
+            get {
+                return ((int)(this["BaudRate"]));
+            }
+            set {
+                this["BaudRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("502")]
+        public int Port {
+            get {
+                return ((int)(this["Port"]));
+            }
+            set {
+                this["Port"] = value;
+            }
+        }
     }
 }

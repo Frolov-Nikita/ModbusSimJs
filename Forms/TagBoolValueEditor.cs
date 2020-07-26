@@ -37,9 +37,11 @@ namespace ModbusSimJs.Forms
         public TagBoolValueEditor(Tag tag)
         {
             InitializeComponent();
+            this.tag = tag;
             Text = tag.Name;
             Val = (bool)tag.Value;
         }
+
         private void KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -58,6 +60,16 @@ namespace ModbusSimJs.Forms
                     Val = false;
                     break;
             }
+        }
+
+        private void buttonTrue_Click(object sender, EventArgs e)
+        {
+            Val = true;
+        }
+
+        private void buttonFalse_Click(object sender, EventArgs e)
+        {
+            Val = false;
         }
     }
 }

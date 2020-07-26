@@ -10,7 +10,7 @@ namespace ModbusSimJs
 
         public override object FromWords(ushort[] buffer)
         {
-            return buffer[0];
+            return (short)buffer[0];
         }
 
         public override ushort[] ToWords(object value)
